@@ -1,17 +1,11 @@
-# Implantação via Render > New > Blueprint (opcional)
+# Caso se use Render Blueprint no futuro: repositório com arquivos na raiz
 services:
   - type: web
     runtime: static
     name: espaco-yo-demonstracao
-    buildCommand: 'echo "Site estatico: nenhuma compilacao necessaria"'
-    staticPublishPath: ./public
+    buildCommand: 'echo "Site pronto"'
+    staticPublishPath: .
     headers:
       - path: /*
         name: X-Robots-Tag
         value: noindex, nofollow, noarchive
-      - path: /*
-        name: X-Content-Type-Options
-        value: nosniff
-      - path: /*
-        name: Referrer-Policy
-        value: strict-origin-when-cross-origin

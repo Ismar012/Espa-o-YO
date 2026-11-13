@@ -1,49 +1,9 @@
-# Espaço YO — site de demonstração
+# Espaço YO — versão mobile revista
 
-Projeto HTML/CSS/JavaScript estático, pronto para publicar no **Render Static Site**.
+Esta versão mantém o layout desktop, melhora a experiência no celular e corrige a imagem da capa (imagem ilustrativa de manicure, sem a arte de perfil cortada).
 
-## Conteúdo deste pacote
+**O que mudou em telas de até 700 px:** capa integrada com texto, menu de navegação expansível, serviços em cartões deslizáveis, seção de imagem com texto sobreposto, portfólio horizontal, equipe mais compacta, ação fixa de agendamento e microtransições acessíveis.
 
-- `public/index.html`: site completo, com cinco imagens ilustrativas incorporadas para evitar espaços vazios.
-- `public/favicon.svg`: ícone visual "YO" provisório.
-- `public/robots.txt`: solicita que buscadores não indexem a demonstração.
-- `render.yaml`: configuração opcional para implantação pelo Render Blueprint.
+**Como substituir no GitHub (site já no Render):** Abra o repositório `Espa-o-YO`. Clique no arquivo `index.html`, depois no ícone do lápis (Edit this file) e substitua o conteúdo pelo conteúdo do `index.html` desta pasta, ou utilize o recurso de upload para substituir `index.html` pelo novo arquivo. Confirme o commit em `main`. Se o Render estiver ligado à branch `main` com auto-deploy ativo, ele implantará a versão atualizada. Não crie a pasta `public`: o repositório atual usa a raiz. No Render: Root Directory vazio; Build Command `echo "Site pronto"`; Publish Directory `.`.
 
-## Publicar no Render (pelo painel)
-
-1. Descompacte o arquivo ZIP.
-2. Crie um **repositório novo** no GitHub, por exemplo `espaco-yo-demo`, e envie **o conteúdo da pasta `espaco_yo_render`** para a raiz do repositório (o `render.yaml` e a pasta `public` devem ficar na raiz).
-3. No painel do Render, selecione **New > Static Site** e conecte o repositório.
-4. Use estes campos:
-   - **Build Command:** `echo "Site estatico: nenhuma compilacao necessaria"`
-   - **Publish Directory:** `public`
-   - **Root Directory:** deixe em branco (se os arquivos estiverem na raiz).
-5. Crie o Static Site e, após o deploy terminar, abra o endereço `*.onrender.com` atribuído pelo Render.
-
-### Alternativa: Blueprint
-
-No Render, selecione **New > Blueprint**, escolha o mesmo repositório e deixe o Render ler o `render.yaml`. O arquivo configura o site estático e os cabeçalhos de não indexação.
-
-## Testar antes de publicar
-
-Abra `public/index.html` no navegador, ou execute `python -m http.server 8000 -d public` dentro da pasta do projeto e acesse `http://localhost:8000`.
-
-## Importante: conteúdo e autorização
-
-- Esta versão **é uma demonstração não oficial**. O rodapé informa esse caráter.
-- As cinco fotos de reserva são **ilustrativas** e não representam trabalhos reais do Espaço YO. O JavaScript tenta carregar imagens públicas do Booksy; se isso falhar, mantém as imagens ilustrativas.
-- A exibição pública e o uso definitivo de marca, fotos e eventuais depoimentos devem ser aprovados pela proprietária. Para o site oficial, use arquivos originais autorizados, preferencialmente hospedados no próprio projeto.
-- **Agendar** e **Reservar** continuam abrindo a página geral do Espaço YO no Booksy. Nenhum serviço fica selecionado automaticamente nesta versão.
-- Textos, valores de serviços, equipe e dados do negócio devem ser confirmados antes de usar como site oficial.
-- O site **não exige banco de dados**, serviço web Python ou Node. Fontes do Google e tentativas de fotos do Booksy dependem de internet; as imagens de reserva ficam dentro do HTML.
-- A indicação `noindex` ajuda a evitar indexação, mas **não torna o site privado**. Quem tiver a URL poderá acessá-lo.
-- A autoria/assinatura comercial da **sua empresa** pode ser incluída depois que você fornecer o nome e logotipo. Nenhum nome de empresa foi inventado.
-
-## Atualizar o site
-
-Edite `public/index.html`, envie a alteração ao GitHub e o Render poderá publicar automaticamente a nova versão. Para publicar oficialmente, substitua os materiais provisórios e revise a identidade visual conforme a aprovação da proprietária.
-
-## Fontes de configuração
-
-Render Static Sites: https://render.com/docs/static-sites
-Render Blueprints: https://render.com/docs/blueprint-spec
+**Atenção:** a versão continua sendo uma demonstração não oficial. Algumas imagens são ilustrativas; não apresente como trabalhos do salão. Fotografias e identidade oficiais só devem ser utilizadas em produção após autorização. Todos os botões Reservar/Agendar continuam levando ao perfil Booksy sem seleção prévia de serviço, como foi acordado.
